@@ -62,29 +62,29 @@
 
             if (name == guess) {
                 alert("You got it right")
-                good++
+                good = good+1;
             } else {
                 alert("Sorry")
-                oops++
+                oops = oops+1;
             }
             document.getElementById("result").innerHTML = "Good count: "+good+" oops count: "+oops
             Find(oops);
         }
-        let useImage = 1;
+        let oneImage = 1;
 
     function selectImage() {
       switch (useImage) {
         case 1:
           document.getElementById("image").src = "Jaboticaba.jpg";
-          useImage++;
+          oneImage++;
           break;
         case 2:
           document.getElementById("image").src = "magnolia.jpg";
-          useImage++;
+          oneImage++;
           break;
         case 3:
           document.getElementById("image").src = "Nepeta.jpg";
-          useImage = 1;
+          oneImage = 1;
       }
     }
     function Find(countNumberofWrongs) {

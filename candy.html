@@ -55,7 +55,7 @@
         <label for="chewy">Chewy</label>
         <br />
 
-        <input class="btn btn-dark" type="button" onclick="selectBox()" value="Select a box" />
+        <input class="btn btn-primary" type="button" onclick="selectBox()" value="Select a box" />
       </form>
       <br/>
       <form class="form-group">
@@ -74,7 +74,7 @@
           name="check"
         />
         <br/>
-        <input class="btn btn-dark" type="button" onclick="updateBox()" value="Update the box" />
+        <input class="btn btn-primary" type="button" onclick="updateBox()" value="Update the box" />
       </form>
       <div class="container">
         <p id="result">my_candy_box</p>
@@ -82,11 +82,9 @@
     </div>
 
     <script>
-      //SELECT BOX
       let my_candy_box = {};
       let candy_output = document.getElementById("result");
       function selectBox() {
-        // let my_candy_box = {};
         let dark = document.getElementById("dark").checked
         let nuts = document.getElementById("nuts").checked
         let chewy = document.getElementById("chewy").checked
@@ -115,17 +113,13 @@
         document.getElementById("nuts").checked = false;
         document.getElementById("chewy").checked = false;
       }
-      //UPDATE BOX
       function updateBox() {
         let size = document.getElementById("size").value;
         let price = document.getElementById("price").value;
-        if(!size && !price || !size && price || size && !price){
-            document.getElementById("result").innerText = "Please enter both size and price";
-        }else{
             my_candy_box = {};
             my_candy_box[size] = price;
             document.getElementById("result").innerHTML = "my_candy_box " +":"+  JSON.stringify(my_candy_box);
-        }
+        
       } 
     </script>
   </body>

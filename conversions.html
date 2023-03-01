@@ -68,7 +68,7 @@
       function convert() {
         let base_amount = document.getElementById("base_amount").value;
         let conversion_rate = document.getElementById("conversion_rate").value;
-        let toShow = "☑️";
+        let toShow = " ";
         if (conversion_rate - Math.floor(conversion_rate) != 0) {
           for (let i = 0; i < 5; i++) {
             value =
@@ -99,13 +99,13 @@
         
         if(mean){
           let opt = ((parseInt(base_amount) + parseInt(conversion_rate))/2);
-          document.getElementById("radio_result").innerHTML = `<p>\u2764\uFE0F average of ${base_amount} and ${conversion_rate} is ${opt}</p>`
+          document.getElementById("radio_result").innerHTML = `<p> average of ${base_amount} and ${conversion_rate} is ${opt}</p>`
         }else if(maximum){
           let max = Math.max(base_amount, conversion_rate);
-          document.getElementById("radio_result").innerHTML = `<p>\u{1F49B} maximum of ${base_amount} and ${conversion_rate} is ${max}</p>`
+          document.getElementById("radio_result").innerHTML = `<p> maximum of ${base_amount} and ${conversion_rate} is ${max}</p>`
         }else if(minimum){
           let min = Math.min(base_amount, conversion_rate);
-          document.getElementById("radio_result").innerHTML = `<p>\u{1F49A} minimum of ${base_amount} and ${conversion_rate} is ${min}</p>`
+          document.getElementById("radio_result").innerHTML = `<p> minimum of ${base_amount} and ${conversion_rate} is ${min}</p>`
         }
          }  
     </script>
